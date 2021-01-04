@@ -35,15 +35,17 @@ cacheSolve <- function(x, ...) {
   inv <- x$getinverse()
   # Lets check if the inverse value is already cached. 
   # If not, the function will calculate the inverse for the matrix. 
-  # This will be Step 2 below.
+  # This will be Step 2 (Compute section) below.
   if(!is.null(inv)) {
     message("getting cached data...")
     return(inv)
   }
   data <- x$get()
   
-  
-  
+  # Compute the inverse of a square matrix using the solve function
+  inv <- solve(data, ...)
+  x$setinverse(inv)
+  inv
   
   # Return a matrix that is the inverse of 'x'
 }
