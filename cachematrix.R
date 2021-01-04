@@ -56,5 +56,11 @@ m = makeCacheMatrix(x)
 m$get()   # Get x without inversion
 cacheSolve(m) # Get x with inversion
 
+# Lets continue testing by setting new invertible matrix 
+zMatrix <- makeCacheMatrix(matrix(c(-2, 5, 4, -4), 2, 2)) 
+zMatrix$get()
+# Following should return NULL: inv not yet assigned by cacheSolve
+zMatrix$getinv() 
+
 
 
