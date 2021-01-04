@@ -49,3 +49,12 @@ cacheSolve <- function(x, ...) {
   
   # Return a matrix that is the inverse of 'x'
 }
+
+# Lets add some examples to test these functions
+x <- matrix(c(2, 10, 30, 40), 2, 2) # new invertible matrix
+m = makeCacheMatrix(x)
+m$get()   # Get x without inversion
+cacheSolve(m) # Get x with inversion
+
+
+
