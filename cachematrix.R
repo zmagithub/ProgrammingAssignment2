@@ -62,5 +62,10 @@ zMatrix$get()
 # Following should return NULL: inv not yet assigned by cacheSolve
 zMatrix$getinv() 
 
+# Test the caching behavior by setting new invertible matrix
+zMatrix$set(matrix((c(-2, 3, 2, -2)), 2, 2)) 
+cacheSolve(zMatrix)
+zMatrix$getinv()
+
 
 
