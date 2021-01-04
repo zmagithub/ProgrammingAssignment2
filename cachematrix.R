@@ -67,5 +67,11 @@ zMatrix$set(matrix((c(-2, 3, 2, -2)), 2, 2))
 cacheSolve(zMatrix)
 zMatrix$getinv()
 
+# Another test will be
+x2 <- (matrix(sample(1:100,9),3,3))
+m2 = makeCacheMatrix(x2)
+m2$get() # Get m2 without inversion
+cacheSolve(m2) # Get m2 with inversion
+
 
 
